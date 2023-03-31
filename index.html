@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="sv">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- TODO comments-->
+		<title>Airsoft i Hille! - Boka Idag</title>
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="contentSections.css">
+		<link rel="stylesheet" href="navBar.css">
+		<link rel="stylesheet" href="imageSlider.css">
+		<link rel="icon" type="Images/x-icon" href="Images/Logga.png">
+	</head>
+	<body>
+		<div id="navBar">
+			<ul>
+				<li class="navTitle"><img src="Images/Logga.png" alt="Logga"></li>
+				<li class="navTitle"><h1>Hille Airsoft</h1></li>
+
+				<li class="navLink"><a href="kontakt.html">Kontakt</a></li>
+				<li class="navLink"><a href="utrustning.html">Utrustning</a></li>
+				<li class="navLink"><a href="spela.html">Spela</a></li>
+				<li class="navLink"><a href="airsoft.html">Airsoft</a></li>
+				<li class="navLink"><a href="index.html" class="active">Hem</a></li>
+			</ul>
+		</div>
+
+		<div class="header">
+				<h1>Adrenalinpumpade action <br> nära dig!</h1>
+				<a href="spela.html"><img src="Images/BokaDirektKnapp.png" alt="Boka Direkt"></a>
+		</div>
+
+
+		<div class="grayContentSection" style="padding-bottom: 50px;">
+			<h1>Speltillfällen varje helg!</h1>
+			<p>Under sommarhalvåret håller vi event varje <br>
+			lördag, ingen föranmälning krävs.</p>
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+				  <div class="numbertext">1 / 3</div>
+			  	<img src="Images/Mat.jpg" style="width:100%" alt="Kiosken">
+				  <div class="caption">Mat finns på plats i kiosken!</div>
+				</div>
+
+				<div class="mySlides fade">
+				  <div class="numbertext">2 / 3</div>
+			  	<img src="Images/Rekommendationer.jpg" style="width:100%" alt="Rekommendationer">
+				  <div class="caption">Få rekommendationer på inköp hos oss!</div>
+				</div>
+
+				<div class="mySlides fade">
+				  <div class="numbertext">3 / 3</div>
+			  	<img src="Images/Spellägen.jpg" style="width:100%" alt="Spellägen">
+				  <div class="caption">Har du ett eget spelläge? Tipsa oss!</div>
+				</div>
+			</div>
+			<br>
+			<div class="slideControls">
+				<a class="prev" onclick="plusSlides(-1)">❮</a>
+			  <span class="dot" onclick="currentSlide(1)"></span>
+			  <span class="dot" onclick="currentSlide(2)"></span>
+			  <span class="dot" onclick="currentSlide(3)"></span>
+				<a class="next" onclick="plusSlides(1)">❯</a>
+			</div>
+
+			<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+				  let i;
+				  let slides = document.getElementsByClassName("mySlides");
+				  let dots = document.getElementsByClassName("dot");
+				  if (n > slides.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+				    slides[i].style.display = "none";
+				  }
+				  for (i = 0; i < dots.length; i++) {
+				    dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";
+				  dots[slideIndex-1].className += " active";
+				}
+			</script>
+		</div>
+
+
+		<div class="alternativesContentSection">
+			<a href="utrustning.html">
+				<div class="alternativeBox blackAlternative">
+					<h1>Toppenutrustning</h1>
+					<p>Vi hyr ut ett flertal olika vapen och <br> utrustning till de som inte har egen</p>
+					<img src="Images/Utrustning.jpg" alt="Utrustning">
+				</div>
+			</a>
+			<a href="banor.html">
+				<div class="alternativeBox redAlternative">
+					<h1>Unika Banor</h1>
+					<p>Vi erbjuder för tillfället fyra banor av varierande <br>storlek. Klicka här för att kolla närmre</p>
+					<img src="Images/Banor.jpg" alt="Banor">
+				</div>
+			</a>
+			<a href="spela.html">
+				<div class="alternativeBox blackAlternative">
+					<h1>Privatboka</h1>
+					<p>Passar inte tiderna? Vill ni ha <br>banorna för er själva? Boka här!</p>
+					<img src="Images/Privatboka.jpg" alt="Boka">
+				</div>
+			</a>
+		</div>
+
+		<div id="footer">
+			<h5>
+				Epost: kontakt@hilleairsoft.se
+				<br>
+				Adress: Hillevallsvägen 3¼, Gävle
+				<br>
+				<br>
+				<br>
+				<br>
+				Copyright © Hille Airsoft 2022, Design Birger Evansson
+			</h5>
+		</div>
+	</body>
+</html>

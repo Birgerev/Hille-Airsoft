@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="sv">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- TODO comments-->
+		<title>Airsoft i Hille! - Kontakt</title>
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="contentSections.css">
+		<link rel="stylesheet" href="navBar.css">
+		<style>
+			p {
+				width: 30%;
+			}
+			a {
+				color: #FF6161;
+			}
+			#map {
+			  height: 400px;
+			  width: 40%;
+			}
+		</style>
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy8HKgqzzyMOiFzhA2Gh-1dHYWnkYGQZY&callback=initMap">
+		</script>
+		<link rel="icon" type="Images/x-icon" href="Images/Logga.png">
+	</head>
+	<body>
+		<div id="navBar">
+			<ul>
+				<li class="navTitle"><img src="Images/Logga.png" alt="Logga"></li>
+				<li class="navTitle"><h1>Hille Airsoft</h1></li>
+
+				<li class="navLink"><a href="kontakt.html" class="active">Kontakt</a></li>
+				<li class="navLink"><a href="utrustning.html">Utrustning</a></li>
+				<li class="navLink"><a href="spela.html">Spela</a></li>
+				<li class="navLink"><a href="airsoft.html">Airsoft</a></li>
+				<li class="navLink"><a href="index.html">Hem</a></li>
+			</ul>
+		</div>
+
+		<div class="header"></div>
+
+		<div class="grayContentSection">
+			<h1>Kontaktinfo</h1>
+
+			<p><u>Adress: Hillevallsvägen 3¼, Gävle</u></p>
+			<p><u>Telefonnummer: 073 334 19 18</u></p>
+			<p><u>Epost: kontakt@hilleairsoft.se</u></p>
+			<p>Hille Airsoft AB</p>
+		</div>
+
+		<div class="redContentSection">
+			<h1>Hitta Hit</h1>
+			<p><u>Adress: Hillevallsvägen 3¼, Gävle</u></p>
+			<!--The div element for the map -->
+			<div id="map"></div>
+				<script>
+					// Initialize and add the map
+					function initMap() {
+					// The location of Uluru
+					const uluru = { lat: 60.7309, lng: 17.19424 };
+					// The map, centered at Uluru
+					const map = new google.maps.Map(document.getElementById("map"), {
+						zoom: 12,
+						center: uluru,
+					});
+					// The marker, positioned at Uluru
+					const marker = new google.maps.Marker({
+						position: uluru,
+						map: map,
+					});
+					}
+
+					window.initMap = initMap;
+				</script>
+		</div>
+
+
+		<div id="footer">
+			<h5>
+				Epost: kontakt@hilleairsoft.se
+				<br>
+				Adress: Hillevallsvägen 3¼, Gävle
+				<br>
+				<br>
+				<br>
+				<br>
+				Copyright © Hille Airsoft 2022, Design Birger Evansson
+			</h5>
+		</div>
+	</body>
+</html>

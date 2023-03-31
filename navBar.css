@@ -1,0 +1,46 @@
+#navBar {
+	width: 100%;
+	height: 70px;
+	margin: 0;
+	background-color: #FAFAFA;
+  border-bottom: 8px solid #31303B;
+}
+#navBar ul {
+	list-style-type: none;
+	padding: 0px 8% 0px 8%;
+	margin: 0;
+}
+
+#navBar .navTitle {
+	float: left;
+}
+#navBar .navLink {
+	float: right;
+}
+
+#navBar img {
+  padding-top: 7px;
+  padding-right: 5px;
+}
+#navBar h1 {
+	font-size: 50px;
+	margin: 0;
+  padding-top: 5px;
+	color: #FF6161;
+}
+
+#navBar a {
+	display: block;
+	color: #FF6161;
+	text-align: center;
+	padding: 26px 15px 18px 15px;
+	text-decoration: none;
+  font-weight: bold;
+}
+#navBar a:hover {
+	background-color: #E3E3E3;
+}
+#navBar a.active {
+	background-color: #FF6161;
+	color: #FFFFFF;
+}
